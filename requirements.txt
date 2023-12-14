@@ -19,7 +19,6 @@ pkginfo==1.9.6
 pycparser==2.21
 Pygments==2.17.2
 pyproject_hooks==1.0.0
-QMatic @ file:///home/galen/Dropbox/bin/qmatic/dist/QMatic-0.0.1-py3-none-any.whl#sha256=cfc80438fef195e25c471b11cd5a0dc11afba33fa83dcb278f01dc62242e3074
 readme-renderer==42.0
 requests==2.31.0
 requests-toolbelt==1.0.0

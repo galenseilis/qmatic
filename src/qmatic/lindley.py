@@ -1,11 +1,28 @@
+from numpy.typing import NDArray
+
+def lindley(L_0:float, A:NDArray, D:NDArray):
+    assert A.size == D.size
+    L = np.empty(A.size + 1)
+    L[0] = L_0
+    
+    for t, (a_t, d_t) in enumerate(zip(A,D)):
+        L[t+1] = np.maximum(0, L[t] + a_t - d_t)
+
+    return L
+
+import matplotlib.pyplot as plt
 import numpy as np
-from lindley_cython import lindley_cython
 
-# Example usage
-L_0 = 0.0
-A = np.array([1.0, 2.0, 3.0])
-D = np.array([0.5, 1.0, 1.5])
+m = 100
+A = np.random.poisson(1,size=m)
+D = np.random.poisson(1.1,size=m)
+L_0 = 100
 
-result = lindley_cython(L_0, A, D)
-print(result)
+##plt.plot(lindley(L_0, A, D))
+##plt.show()
 
+result_1 = lindley(L_0, A, D)
+
+L = np.zeros(A.size + 1)
+L[0] = L_0
+result_2 = np.maximum(0, L[:-1] + A - D, out=L[1:])
