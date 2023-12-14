@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61", "wheel", "Cython>=0.29.24"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "QMatic"
+version = "0.0.1"
+authors = [
+  { name="Galen Seilis", email="galen.seilis@seilis.ca" },
+]
+description = "Mathematical functions for queueing theory."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/galenseilis/qmatic"
+Issues = "https://github.com/galenseilis/qmatic/issues"
+
+[tool.cythonize]
+# This section is optional and allows you to configure Cython options.
+# For example, you can enable compiler directives here.
+
