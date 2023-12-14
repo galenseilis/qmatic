@@ -3,6 +3,7 @@ certifi==2023.11.17
 cffi==1.16.0
 charset-normalizer==3.3.2
 cryptography==41.0.7
+Cython==3.0.6
 docutils==0.20.1
 idna==3.6
 importlib-metadata==7.0.0
@@ -19,6 +20,7 @@ pkginfo==1.9.6
 pycparser==2.21
 Pygments==2.17.2
 pyproject_hooks==1.0.0
+QMatic @ file:///home/galen/Dropbox/bin/qmatic/dist/QMatic-0.0.2-py3-none-any.whl
 readme-renderer==42.0
 requests==2.31.0
 requests-toolbelt==1.0.0
