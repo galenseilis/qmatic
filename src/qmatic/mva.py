@@ -131,12 +131,3 @@ def mean_value_analysis(L_0:NDArray, M:int, mu:NDArray, P:NDArray):
 
     return L, W, lambdas, v
     
-
-K = 3
-P = np.array([np.random.dirichlet([1] * K) for i in range(K)])
-
-L0 = np.zeros(K)
-M = 10000
-mu = 1 / np.array((np.arange(1,M+1),)*K).T
-
-L, W, lambdas, v = mean_value_analysis(L0, M, mu, P)
