@@ -59,5 +59,5 @@ def sample_mm1_len_seq(t, k0, taus, lambdas, mus):
             
         
 if __name__ == "__main__":
-    np.random.seed(1)
+    np.random.seed(2018)
     sample_mm1_len_seq(10, 5, list(range(1,9)), [10] * 8, [10] * 8)
