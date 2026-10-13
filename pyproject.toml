@@ -27,10 +27,16 @@ dev = [
     "pytest-cov",
     "ruff",
 ]
+docs = [
+    "mkdocs>=1.5",
+    "mkdocs-material>=9",
+    "mkdocstrings[python]>=0.24",
+]
 
 [project.urls]
 Homepage = "https://github.com/galenseilis/qmatic"
 Issues = "https://github.com/galenseilis/qmatic/issues"
+Documentation = "https://galenseilis.github.io/qmatic/"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -43,6 +49,7 @@ doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS"]
 [tool.ruff]
 line-length = 100
 target-version = "py39"
+extend-exclude = ["docs"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

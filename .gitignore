@@ -161,3 +161,6 @@ cython_debug/
 
 # Local agent instructions (never commit)
 AGENTS.md
+
+# MkDocs build output
+site/

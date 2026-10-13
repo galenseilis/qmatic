@@ -1,0 +1,89 @@
+site_name: qmatic
+site_description: Theoretical calculations for queueing models.
+site_url: https://galenseilis.github.io/qmatic/
+repo_url: https://github.com/galenseilis/qmatic
+repo_name: galenseilis/qmatic
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - tutorials/getting-started.md
+  - How-to guides:
+      - how-to/index.md
+      - how-to/transient-mm1.md
+      - how-to/closed-network-mva.md
+      - how-to/lindley-recursion.md
+  - Reference:
+      - reference/index.md
+      - reference/dists.md
+      - reference/lindley.md
+      - reference/mva.md
+  - Explanation:
+      - explanation/mm1-transient.md
+      - explanation/visit-ratios-and-mva.md
+      - explanation/scope-and-stability.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_source: true
+            show_root_heading: true
+            show_root_toc_entry: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            members_order: source
+            separate_signature: true
+            show_signature_annotations: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

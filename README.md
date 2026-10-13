@@ -27,4 +27,17 @@ ruff check .              # lint
 ruff format .             # format
 ```
 
+## Documentation
+
+Full documentation follows the [Diátaxis](https://diataxis.fr/) framework and is
+published at <https://galenseilis.github.io/qmatic/>.
+
+Build it locally with MkDocs:
+
+```bash
+pip install -e ".[docs]"
+mkdocs serve              # live preview at http://127.0.0.1:8000
+mkdocs build --strict     # one-off build to site/
+```
+
 See `ROADMAP.md` for the plan toward a mature, released package.

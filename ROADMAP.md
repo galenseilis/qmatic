@@ -21,9 +21,12 @@ Completed in the first execution pass (all verified with `pytest` + `ruff` in a 
   steady state. Input validation added across modules.
 - Phase 3/5 started: `ruff` config + `ruff format`, and `.github/workflows/ci.yml` running
   ruff + pytest on Python 3.9-3.12. Wheel builds locally and installs in a clean venv.
+- Phase 4 started: Diátaxis documentation under `docs/` (tutorial, how-to, reference,
+  explanation) built with MkDocs Material + mkdocstrings, math via MathJax, and a GitHub Pages
+  deploy workflow (`.github/workflows/docs.yml`). `mkdocs build --strict` is clean.
 
 Still open: doctest-cited references, `rho < 1` guard, property-based tests, type checking,
-pre-commit, docs site, PyPI publishing, and the scope decisions below.
+pre-commit, PyPI publishing, and the scope decisions below.
 
 ## Current state (baseline)
 
